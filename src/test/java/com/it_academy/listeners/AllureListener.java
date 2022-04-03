@@ -2,7 +2,6 @@ package com.it_academy.listeners;
 
 
 import com.it_academy.tests.utils.ScreenShotsUtils;
-import io.qameta.allure.Description;
 
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.slf4j.Logger;
