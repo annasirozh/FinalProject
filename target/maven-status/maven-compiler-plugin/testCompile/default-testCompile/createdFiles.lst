@@ -1,0 +1,7 @@
+com\it_academy\tests\onliner\RunnerTest.class
+com\it_academy\tests\utils\ScreenShotsUtils.class
+com\it_academy\tests\onliner\BaseTest.class
+com\it_academy\tests\onliner\ComputerAndNetworkMenuNavigationTest.class
+com\it_academy\tests\onliner\CatalogMenuNavigationTest.class
+com\it_academy\listeners\AllureListener.class
+com\it_academy\tests\onliner\AccessoriesMenuNavigationTest.class
