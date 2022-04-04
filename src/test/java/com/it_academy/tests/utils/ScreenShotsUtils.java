@@ -24,5 +24,4 @@ public class ScreenShotsUtils {
             LOG.error("Error creating screenshot");
         }
     }
-
 }

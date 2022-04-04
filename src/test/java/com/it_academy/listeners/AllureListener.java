@@ -1,6 +1,5 @@
 package com.it_academy.listeners;
 
-
 import com.it_academy.tests.utils.ScreenShotsUtils;
 
 import org.junit.jupiter.api.extension.ExtensionContext;

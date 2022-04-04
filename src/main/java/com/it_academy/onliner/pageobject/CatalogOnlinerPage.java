@@ -5,13 +5,13 @@ import io.qameta.allure.Step;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static com.codeborne.selenide.CollectionCondition.allMatch;
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$$x;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class CatalogOnlinerPage extends BasePage {
     private static final Logger LOG = LoggerFactory.getLogger(CatalogOnlinerPage.class);
@@ -45,6 +45,7 @@ public class CatalogOnlinerPage extends BasePage {
 
     @Step("Getting a list of category menu items")
     public List<String> getCategoryMenuSectionsTitles() {
+        LOG.info("Get text menu category of catalog");
         categoryMenuSectionsTitles.shouldHave(sizeGreaterThan(0))
                 .shouldHave(allMatch("category elements menu sections is not empty",
                         element -> !element.getText().isEmpty()));

@@ -10,7 +10,7 @@ import java.util.List;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
-public class CatalogMenuNavigationTest extends BaseTest {
+public class OnlinerMenuNavigationTest extends BaseTest {
     private static final List<String> CATEGORY_COMPUTER_AND_NETWORK_LIST =
             Arrays.asList("Ноутбуки, компьютеры, мониторы",
                     "Комплектующие", "Хранение данных", "Сетевое оборудование");

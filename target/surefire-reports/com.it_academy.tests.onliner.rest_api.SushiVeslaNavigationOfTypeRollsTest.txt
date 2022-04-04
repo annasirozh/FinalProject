@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.it_academy.tests.onliner.rest_api.SushiVeslaNavigationOfTypeRollsTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.963 s - in com.it_academy.tests.onliner.rest_api.SushiVeslaNavigationOfTypeRollsTest
