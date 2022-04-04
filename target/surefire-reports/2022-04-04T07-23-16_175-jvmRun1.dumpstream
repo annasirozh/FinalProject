@@ -1,0 +1,72 @@
+# Created at 2022-04-04T07:24:03.787
+ForkStarter IOException: 912 [main] INFO  com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+934 [main] INFO  com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\pipindron\IdeaProjects\OnlinerSelenideProject\build\downloads\1649046207928_2072_1
+952 [main] INFO  com.it_academy.onliner.framework.WebDriverCreator - Get the driver type
+956 [main] INFO  com.it_academy.onliner.framework.WebDriverCreator - Download Chromedriver
+490 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=99.0.4844.84 Platform=WINDOWS
+490 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 5.18.0
+491 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 3.141.59 build time: 2018-11-14T08:17:03
+491 [main] INFO  com.codeborne.selenide.drivercommands.CreateDriverCommand - Create webdriver in current thread 1: ChromeDriver -> ChromeDriver: chrome on WINDOWS (d55ab733c4f9d274eea9bb0e6d246b48)
+324 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter link
+045 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter category
+847 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter product
+892 [main] INFO  com.it_academy.onliner.pageobject.CatalogOnlinerPage - Get text product list sections accessories
+609 [main] INFO  com.it_academy.onliner.pageobject.CatalogOnlinerPage - Get text descriptions product list sections accessories
+847 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter link
+586 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter category
+541 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter link
+081 [main] INFO  com.it_academy.onliner.pageobject.CatalogOnlinerPage - Get the text of the catalog menu list
+375 [Thread-0] INFO  com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 24 -> ChromeDriver: chrome on WINDOWS (d55ab733c4f9d274eea9bb0e6d246b48)...
+384 [Thread-1] INFO  com.codeborne.selenide.impl.FileHelper - Deleted empty folder: C:\Users\pipindron\IdeaProjects\OnlinerSelenideProject\build\downloads\1649046207928_2072_1.
+org.apache.maven.plugin.surefire.booterclient.output.MultipleFailureException: 912 [main] INFO  com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
+934 [main] INFO  com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\pipindron\IdeaProjects\OnlinerSelenideProject\build\downloads\1649046207928_2072_1
+952 [main] INFO  com.it_academy.onliner.framework.WebDriverCreator - Get the driver type
+956 [main] INFO  com.it_academy.onliner.framework.WebDriverCreator - Download Chromedriver
+490 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=99.0.4844.84 Platform=WINDOWS
+490 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 5.18.0
+491 [main] INFO  com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 3.141.59 build time: 2018-11-14T08:17:03
+491 [main] INFO  com.codeborne.selenide.drivercommands.CreateDriverCommand - Create webdriver in current thread 1: ChromeDriver -> ChromeDriver: chrome on WINDOWS (d55ab733c4f9d274eea9bb0e6d246b48)
+324 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter link
+045 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter category
+847 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter product
+892 [main] INFO  com.it_academy.onliner.pageobject.CatalogOnlinerPage - Get text product list sections accessories
+609 [main] INFO  com.it_academy.onliner.pageobject.CatalogOnlinerPage - Get text descriptions product list sections accessories
+847 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter link
+586 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter category
+541 [main] ERROR io.qameta.allure.util.NamingUtils - Could not find parameter link
+081 [main] INFO  com.it_academy.onliner.pageobject.CatalogOnlinerPage - Get the text of the catalog menu list
+375 [Thread-0] INFO  com.codeborne.selenide.drivercommands.CloseDriverCommand - Close webdriver: 24 -> ChromeDriver: chrome on WINDOWS (d55ab733c4f9d274eea9bb0e6d246b48)...
+384 [Thread-1] INFO  com.codeborne.selenide.impl.FileHelper - Deleted empty folder: C:\Users\pipindron\IdeaProjects\OnlinerSelenideProject\build\downloads\1649046207928_2072_1
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.<init>(ThreadedStreamConsumer.java:58)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer.<init>(ThreadedStreamConsumer.java:110)
+	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:595)
+	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:283)
+	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:246)
+	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1149)
+	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:991)
+	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:837)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+	at org.codehaus.classworlds.Launcher.main(Launcher.java:47)
+
+

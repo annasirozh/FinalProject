@@ -18,7 +18,7 @@ public class AllureListener implements TestWatcher {
     }
 
     public void testAborted(ExtensionContext context, Throwable cause) {
-        LOG.warn("Test aborted for test {}", context.getDisplayName());
+        LOG.error("Test aborted for test {}", context.getDisplayName());
         ScreenShotsUtils.takeScreenshotAndAttachToAllureReport();
     }
 }

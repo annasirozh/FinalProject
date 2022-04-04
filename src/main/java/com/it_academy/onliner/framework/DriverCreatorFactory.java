@@ -5,13 +5,13 @@ import org.slf4j.LoggerFactory;
 
 public final class DriverCreatorFactory {
 
-    public static WebDriverCreator getDriverCreator(String driverType){
+    public static WebDriverCreator getDriverCreator(String driverType) {
 
         final Logger LOG = LoggerFactory.getLogger(WebDriverCreator.class);
 
-        switch(driverType){
+        switch (driverType) {
             case "chrome":
-                LOG.info("Download Chromdriver");
+                LOG.info("Download Chromedriver");
                 return new ChromeDriverCreator();
             case "firefox":
                 LOG.info("Download FirefoxDriver");

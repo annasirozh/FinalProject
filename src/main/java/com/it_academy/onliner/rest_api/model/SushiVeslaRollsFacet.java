@@ -1,7 +1,10 @@
 package com.it_academy.onliner.rest_api.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.Objects;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class SushiVeslaRollsFacet {
     private int id;
     private String name;

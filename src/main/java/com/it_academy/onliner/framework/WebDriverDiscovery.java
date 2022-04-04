@@ -21,7 +21,7 @@ public class WebDriverDiscovery implements WebDriverProvider {
             return DriverCreatorFactory.getDriverCreator(driverType).create();
         } catch (Exception e) {
             LOG.info("Driver type unknown");
+            return null;
         }
-        return null;
     }
 }

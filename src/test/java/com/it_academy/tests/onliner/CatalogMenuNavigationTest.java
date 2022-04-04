@@ -4,49 +4,46 @@ import com.it_academy.onliner.pageobject.CatalogOnlinerPage;
 import com.it_academy.onliner.pageobject.OnlinerHomePage;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class CatalogMenuNavigationTest extends BaseTest{
+public class CatalogMenuNavigationTest extends BaseTest {
+    private static final List<String> CATEGORY_COMPUTER_AND_NETWORK_LIST =
+            Arrays.asList("Ноутбуки, компьютеры, мониторы",
+                    "Комплектующие", "Хранение данных", "Сетевое оборудование");
 
     @Test
-    @Description ("test the user is able to saw sections of Catalog")
+    @Description("test the user is able to saw sections of Catalog")
     public void testUserIsAbleToSawSectionsOfCatalog() {
-        new OnlinerHomePage().navigateToOnlinerHomePage();
-        List<String> catalogMenuSections = new OnlinerHomePage()
+        new OnlinerHomePage().navigateToOnlinerHomePage()
                 .clickOnMainNavigationLink()
-                .isNotEmptyCatalogMenuSectionsTitle();
-        System.out.println(catalogMenuSections);
+                .assertCatalogMenuSectionsTitle();
     }
+
     @Test
     @Description("test the user is able to saw sections of Computer and Network menu sections")
     public void testUserIsAbleToSawSectionsOfComputerAndNetworkMenuSections() {
         new OnlinerHomePage().navigateToOnlinerHomePage();
-        List<String> computerAndNetworksMenuSectioins  = new OnlinerHomePage()
+        List<String> computerAndNetworksMenuSectioins = new OnlinerHomePage()
                 .clickOnMainNavigationLink()
                 .clickOnCatalogClassifierLink("Компьютеры и\u00a0сети")
-                .getCategoryMenuSectionsTitle();
+                .getCategoryMenuSectionsTitles();
         assertThat(computerAndNetworksMenuSectioins)
                 .as("Sections of menu and Networks is not displayed")
-                .contains("Ноутбуки, компьютеры, мониторы","Комплектующие","Хранение данных","Сетевое оборудование");
-        System.out.println(computerAndNetworksMenuSectioins );
+                .containsAll(CATEGORY_COMPUTER_AND_NETWORK_LIST);
     }
+
     @Test
     @Description("test the user is able to saw product sections of Catalog")
     public void testUserIsAbleToSawProductsSectionsOfCatalog() {
-        new OnlinerHomePage().navigateToOnlinerHomePage();
-        List<String> productsTitlesOfSectioinsAccessories = new OnlinerHomePage()
+        new OnlinerHomePage().navigateToOnlinerHomePage()
                 .clickOnMainNavigationLink()
                 .clickOnCatalogClassifierLink("Компьютеры и\u00a0сети")
                 .clickOnComputerAndNetworkClassifierLink("Комплектующие")
-                .isNotEmptyProductListSectionsAccessoriesTitle();
-        System.out.println(productsTitlesOfSectioinsAccessories);
-        List<String> productsDescriptionsOfSectioinsAccessories = new CatalogOnlinerPage()
-                .isNotEmptyProductListSectioinsAccessoriesDescriptions();
-        System.out.println(productsDescriptionsOfSectioinsAccessories);
+                .assertProductListSectionsAccessoriesTitles();
+        new CatalogOnlinerPage().assertProductListSectioinsAccessoriesDescriptions();
     }
 }

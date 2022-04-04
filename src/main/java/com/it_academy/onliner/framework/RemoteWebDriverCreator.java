@@ -14,22 +14,22 @@ public class RemoteWebDriverCreator implements WebDriverProvider {
     private static final Logger LOG = LoggerFactory.getLogger(RemoteWebDriverCreator.class);
 
     @Override
-    public RemoteWebDriver createDriver(@Nonnull DesiredCapabilities desiredCapabilities){
+    public RemoteWebDriver createDriver(@Nonnull DesiredCapabilities desiredCapabilities) {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         String driverType = System.getProperty("driverType");
         capabilities.setBrowserName(driverType);
-        capabilities.setCapability("os","Windows");
-        capabilities.setCapability("os_version","10");
+        capabilities.setCapability("os", "Windows");
+        capabilities.setCapability("os_version", "10");
         return new RemoteWebDriver(getGridUrl(), capabilities);
     }
 
-    private URL getGridUrl(){
+    private URL getGridUrl() {
         try {
-            LOG.info("Gridurl is read from property");
+            LOG.info("GridUrl is read from property");
             return new URL(System.getProperty("gridUrl"));
         } catch (MalformedURLException e) {
-            LOG.info("Gridurl is not read from property");
-            throw new IllegalStateException(e.getMessage(),e);
+            LOG.info("GridUrl is not read from property");
+            throw new IllegalStateException(e.getMessage(), e);
         }
     }
 }
